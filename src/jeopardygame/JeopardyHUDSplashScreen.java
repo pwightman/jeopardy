@@ -43,14 +43,14 @@ public class JeopardyHUDSplashScreen extends javax.swing.JPanel {
 
         dadEdition.setFont(new java.awt.Font("Impact", 0, 150)); // NOI18N
         dadEdition.setForeground(new java.awt.Color(255, 255, 0));
-        dadEdition.setText("DAD EDITION!");
-        add(dadEdition, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 780, -1, -1));
+        dadEdition.setText("CHRISTMAS EDITION!");
+        add(dadEdition, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 780, -1, -1));
 
         dadEditionShadow.setFont(new java.awt.Font("Impact", 0, 150)); // NOI18N
-        dadEditionShadow.setText("DAD EDITION!");
-        add(dadEditionShadow, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 790, -1, -1));
+        dadEditionShadow.setText("CHRISTMAS EDITION!");
+        add(dadEditionShadow, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 790, -1, -1));
 
-        SplashLogo.setFont(new java.awt.Font("Gyparody", 0, 450)); // NOI18N
+        SplashLogo.setFont(new java.awt.Font("Gyparody", 0, 450));
         SplashLogo.setForeground(new java.awt.Color(255, 255, 255));
         SplashLogo.setText("JEOPARDY!");
         SplashLogo.setMaximumSize(new java.awt.Dimension(1920, 1200));
@@ -58,7 +58,7 @@ public class JeopardyHUDSplashScreen extends javax.swing.JPanel {
         SplashLogo.setPreferredSize(new java.awt.Dimension(1920, 1200));
         add(SplashLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 1770, 800));
 
-        SplashLogoGrey.setFont(new java.awt.Font("Gyparody", 0, 456)); // NOI18N
+        SplashLogoGrey.setFont(new java.awt.Font("Gyparody", 0, 456));
         SplashLogoGrey.setForeground(new java.awt.Color(204, 204, 204));
         SplashLogoGrey.setText("JEOPARDY!");
         SplashLogoGrey.setMaximumSize(new java.awt.Dimension(1920, 1200));
@@ -66,7 +66,7 @@ public class JeopardyHUDSplashScreen extends javax.swing.JPanel {
         SplashLogoGrey.setPreferredSize(new java.awt.Dimension(1920, 1200));
         add(SplashLogoGrey, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 1800, 800));
 
-        SplashLogoDarkGrey.setFont(new java.awt.Font("Gyparody", 0, 460)); // NOI18N
+        SplashLogoDarkGrey.setFont(new java.awt.Font("Gyparody", 0, 460));
         SplashLogoDarkGrey.setForeground(new java.awt.Color(153, 153, 153));
         SplashLogoDarkGrey.setText("JEOPARDY!");
         SplashLogoDarkGrey.setMaximumSize(new java.awt.Dimension(1920, 1200));

@@ -32,6 +32,7 @@ import java.util.HashMap;
      public static int DISPLAYDAILYDOUBLE = 15;
      public static int PLAYTIMEROUTSOUND = 16;
      public static int THINKING = 17;
+     public static int RECONNECT = 18;
 
    // Private constructor prevents instantiation from other classes
    private JeopardyProtocol() {

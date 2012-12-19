@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -72,6 +72,7 @@ public class JeopardyServerPlayerHandler implements Runnable {
         else if( proto == JeopardyProtocol.DAILYDOUBLE)
         {
             controller.setDailyDoubleWager(Integer.parseInt(reader.readLine()));
+            controller.sendDisplayDailyDouble();
         }
 
 
@@ -81,7 +82,7 @@ public class JeopardyServerPlayerHandler implements Runnable {
     {
         writer.println(JeopardyProtocol.DAILYDOUBLE);
         writer.println(maxWager);
-        writer.println(currentScore)   ;
+        writer.println(currentScore);
     }
 
     public void sendScoreUpdate(int numPlayers, String[] names, int[] scores)

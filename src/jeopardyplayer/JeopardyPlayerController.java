@@ -38,8 +38,14 @@ public class JeopardyPlayerController {
     public void startSignin()
     {
         String host = JOptionPane.showInputDialog(null, "Enter IP (Ask Collin or Parker)");
+        String name = JOptionPane.showInputDialog(null, "Enter your name");
+        this.connectWithHostAndName(host, name);
+    }
+    
+    public void connectWithHostAndName(String host, String name)
+    {
+        this.name = name;
         networkHandler.setHost(host);
-        name = JOptionPane.showInputDialog(null, "Enter your name");
         view.playerName.setText(name);
         new Thread(networkHandler).start();
     }

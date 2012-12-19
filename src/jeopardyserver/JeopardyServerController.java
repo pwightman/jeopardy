@@ -184,6 +184,7 @@ public class JeopardyServerController {
         else
             game.setScoreForPlayer(lastCorrectPlayer, game.getScoreForPlayer(lastCorrectPlayer) - dailyDoubleWager);
         sendScoreUpdate();
+
     }
 
     public int getMoneyValueForQuestion(int col, int row)

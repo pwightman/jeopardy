@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
@@ -40,7 +41,6 @@ public class JeopardyHUDController {
         try {
             view = new JeopardyHUD();
             view.setVisible(true);
-            handler = new JeopardyHUDNetworkHandler(this);
             in = new FileInputStream("JeopardySounds/maintheme.wav");
             as = new AudioStream(in);
             green = BorderFactory.createLineBorder(Color.GREEN, 15);
@@ -54,10 +54,17 @@ public class JeopardyHUDController {
 
     public void connect()
     {
+        String host = JOptionPane.showInputDialog(null, "HUD: Enter hostname");
+        this.connectWithHost(host);       
+    }
+    
+    public void connectWithHost(String host) 
+    {
         AudioPlayer.player.start(as);
         File file = new File("JeopardySounds/maintheme.wav");
         if(!file.exists())
             System.out.println("File does not exist!");
+        handler = new JeopardyHUDNetworkHandler(this, host);
         MusicPlayer player = new MusicPlayer(file);
         new Thread(player).start();
         new Thread(handler).start();

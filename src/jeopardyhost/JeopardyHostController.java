@@ -39,6 +39,10 @@ public class JeopardyHostController implements ComboBoxModel{
     public void connectToServer()
     {
         String host = JOptionPane.showInputDialog(null, "Jeopardy Host: Enter hostname");
+        this.connectWithHost(host);
+    }
+    
+    public void connectWithHost(String host) {
         networkHandler.setHost(host);
         Thread t = new Thread(networkHandler);
         t.start();

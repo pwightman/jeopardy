@@ -31,16 +31,16 @@ public class JeopardyHUDNetworkHandler implements Runnable
     String host;
 
 
-    public JeopardyHUDNetworkHandler(JeopardyHUDController c)
+    public JeopardyHUDNetworkHandler(JeopardyHUDController c, String host)
     {
         controller = c;
+        this.host = host;
     }
 
     public void run() {
         try
         {
             running = true;
-            host = JOptionPane.showInputDialog(null, "HUD: Enter hostname");
             socket = new Socket(host, 3366);
 
             if(socket.isConnected())
@@ -98,6 +98,7 @@ public class JeopardyHUDNetworkHandler implements Runnable
 
             int col = Integer.parseInt(reader.readLine());
             int row = Integer.parseInt(reader.readLine());
+            controller.clear(col, row);
             controller.displayQuestion(controller.dailyDoubleText, col, row);
             System.out.println("Displaying daily double...");
         }
